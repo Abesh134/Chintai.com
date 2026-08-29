@@ -1,0 +1,324 @@
+html {
+    font-size: 14px;
+}
+
+
+@media (min-width: 768px) {
+
+    html {
+        font-size: 16px;
+    }
+}
+
+
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+
+body {
+    margin-bottom: 60px;
+}
+
+
+
+/* Bootstrap form placeholder */
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+
+
+
+
+/* ==================================================
+   CHINTAI HOMEPAGE
+================================================== */
+
+
+.chintai-home {
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+
+
+
+
+
+/* ==================================================
+   LEAFLET MAP
+================================================== */
+
+
+#crimeMap {
+    height: 75vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* Leaflet needs this */
+
+.leaflet-container {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* ==================================================
+   SEARCH BOX
+================================================== */
+
+
+.map-search {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 1000;
+}
+
+
+
+    .map-search input {
+        width: 350px;
+        padding: 15px;
+        border-radius: 25px 0 0 25px;
+        border: none;
+        outline: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    }
+
+
+
+    .map-search button {
+        width: 60px;
+        border: none;
+        background: #111827;
+        color: white;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+    }
+
+
+
+
+
+/* ==================================================
+   CURRENT RISK CARD
+================================================== */
+
+
+.risk-card {
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    background: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    z-index: 1000;
+}
+
+
+
+    .risk-card h3 {
+        margin-bottom: 10px;
+    }
+
+
+
+.risk-progress {
+    height: 12px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+
+.risk-fill {
+    width: 80%;
+    height: 100%;
+    background: red;
+    border-radius: 20px;
+}
+
+
+
+
+
+/* ==================================================
+   MAP LEGEND
+================================================== */
+
+
+.legend {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+
+
+    .legend p {
+        margin: 5px 0;
+    }
+
+
+
+
+
+/* ==================================================
+   MAP ACTION BUTTONS
+================================================== */
+
+
+.map-actions {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1000;
+}
+
+
+
+    .map-actions button {
+        display: block;
+        margin: 10px;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 30px;
+        background: #111827;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+
+
+        .map-actions button:hover {
+            background: #2563eb;
+        }
+
+
+
+
+
+/* ==================================================
+   RECENT CRIME PANEL
+================================================== */
+
+
+.crime-panel {
+    padding: 20px;
+    background: white;
+}
+
+
+
+.crime-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+    .crime-item h4 {
+        margin: 0;
+    }
+
+
+
+    .crime-item p {
+        margin: 5px 0;
+        color: #666;
+    }
+
+
+
+
+
+/* ==================================================
+   MOBILE RESPONSIVE
+================================================== */
+
+
+@media(max-width:768px) {
+
+
+    #crimeMap {
+        height: 65vh;
+    }
+
+
+
+    .map-search {
+        width: 90%;
+    }
+
+
+
+        .map-search input {
+            width: 100%;
+        }
+
+
+
+    .risk-card {
+        width: 240px;
+        left: 15px;
+        top: 80px;
+    }
+
+
+
+    .legend {
+        right: 15px;
+        bottom: 15px;
+    }
+
+
+
+    .map-actions {
+        left: 10px;
+        bottom: 10px;
+    }
+}

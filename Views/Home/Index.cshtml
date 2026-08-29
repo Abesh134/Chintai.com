@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "CHINTAI - Crime Intelligence Map";
+}
+
+
+<div class="chintai-home">
+
+
+    <!-- MAP AREA -->
+
+    <div id="crimeMap">
+
+
+        <div class="map-search">
+
+            <input type="text"
+                   placeholder="Search location..." />
+
+
+            <button>
+                🔍
+            </button>
+
+        </div>
+
+
+
+        <!-- Risk Card -->
+
+        <div class="risk-card">
+
+
+            <h4>
+                📍 Your Location
+            </h4>
+
+
+            <h3>
+                Mirpur, Dhaka
+            </h3>
+
+
+            <p>
+                Current Crime Risk
+            </p>
+
+
+            <div class="risk-progress">
+
+
+                <div class="risk-fill">
+                </div>
+
+
+            </div>
+
+
+            <h2>
+                80% HIGH RISK
+            </h2>
+
+
+        </div>
+
+
+
+        <!-- Map Legend -->
+
+        <div class="legend">
+
+
+            <h5>
+                Crime Risk
+            </h5>
+
+
+            <p>
+                🔴 High Risk
+            </p>
+
+
+            <p>
+                🟠 Medium Risk
+            </p>
+
+
+            <p>
+                🟢 Safe
+            </p>
+
+
+        </div>
+
+
+
+        <!-- Floating Buttons -->
+
+
+        <div class="map-actions">
+
+
+            <button>
+                🚨 Report Crime
+            </button>
+
+
+            <button>
+                🛣 Safe Route
+            </button>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- Recent Crime Panel -->
+
+
+    <div class="crime-panel">
+
+
+        <h2>
+            Recent Crimes Nearby
+        </h2>
+
+
+        <div class="crime-item">
+
+
+            🔴
+
+            <div>
+
+                <h4>
+                    Robbery
+                </h4>
+
+                <p>
+                    Mirpur-10 • 30 minutes ago
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="crime-item">
+
+
+            🟠
+
+            <div>
+
+                <h4>
+                    Theft
+                </h4>
+
+                <p>
+                    Agargaon • 2 hours ago
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            initChintaiMap();
+
+        }
+    );
+
+
+</script>
+
