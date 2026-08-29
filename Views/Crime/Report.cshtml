@@ -1,0 +1,249 @@
+﻿@{
+    ViewData["Title"] = "Report Crime";
+}
+
+
+<div class="crime-report-container">
+
+
+    <h1>
+        Report a Crime
+    </h1>
+
+
+    <p>
+        Provide accurate information about the incident.
+    </p>
+
+
+
+    <form method="post" enctype="multipart/form-data">
+
+
+        <!-- Crime Type -->
+
+        <div class="form-group">
+
+            <label>
+                Crime Type
+            </label>
+
+
+            <select class="form-control" name="CrimeType">
+
+                <option>
+                    Select Crime Type
+                </option>
+
+                <option>
+                    Theft
+                </option>
+
+                <option>
+                    Robbery
+                </option>
+
+                <option>
+                    Assault
+                </option>
+
+                <option>
+                    Accident
+                </option>
+
+                <option>
+                    Other
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+
+
+        <!-- Location -->
+
+
+        <div class="form-group">
+
+
+            <label>
+                Crime Location
+            </label>
+
+
+            <input type="text"
+                   class="form-control"
+                   name="Location"
+                   placeholder="Enter location" />
+
+
+            <button type="button"
+                    class="location-btn">
+
+                📍 Select From Map
+
+            </button>
+
+
+        </div>
+
+
+
+
+        <!-- Date Time -->
+
+
+        <div class="form-group">
+
+
+            <label>
+                Date & Time
+            </label>
+
+
+            <input type="datetime-local"
+                   class="form-control"
+                   name="CrimeDate" />
+
+
+        </div>
+
+
+
+
+
+        <!-- Description -->
+
+
+        <div class="form-group">
+
+
+            <label>
+                Description
+            </label>
+
+
+            <textarea class="form-control"
+                      name="Description"
+                      rows="5"
+                      placeholder="Describe what happened..."></textarea>
+
+
+        </div>
+
+
+
+
+        <!-- Evidence Future -->
+        <!-- Evidence Upload -->
+
+        <div class="form-group">
+
+            <label>
+                Upload Evidence Images (Optional)
+            </label>
+
+
+            <input type="file"
+                   id="evidenceImages"
+                   name="EvidenceImages"
+                   class="form-control"
+                   accept="image/*"
+                   multiple
+                   onchange="previewImages(event)" />
+
+
+        </div>
+
+
+
+        <!-- Image Preview Area -->
+
+        <div id="imagePreview"
+             class="image-preview">
+        </div>
+
+
+
+
+
+        <button type="submit"
+                class="submit-report">
+
+            🚨 Submit Report
+
+        </button>
+
+
+
+    </form>
+
+
+
+</div>
+@section Scripts
+{
+
+    <script>
+
+
+        function previewImages(event)
+        {
+
+            let preview =
+            document.getElementById("imagePreview");
+
+
+            preview.innerHTML = "";
+
+
+            let files = event.target.files;
+
+
+
+            for(let i=0;i<files.length;i++)
+            {
+
+
+                let reader =
+                new FileReader();
+
+
+
+                reader.onload=function(e)
+                {
+
+
+                    let img =
+                    document.createElement("img");
+
+
+                    img.src=e.target.result;
+
+
+                    img.className="preview-img";
+
+
+                    preview.appendChild(img);
+
+
+                }
+
+
+
+                reader.readAsDataURL(files[i]);
+
+
+            }
+
+
+        }
+
+
+    </script>
+
+}

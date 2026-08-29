@@ -22,15 +22,27 @@ html {
 
 
 
-html {
-    position: relative;
-    min-height: 100%;
+html,
+body {
+    height: 100%;
 }
 
 
-
 body {
-    margin-bottom: 60px;
+    margin: 0;
+}
+
+
+.chintai-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chintai-main {
+    flex: 1;
+    width: 100%;
 }
 
 
@@ -60,11 +72,9 @@ body {
 
 
 .chintai-home {
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 150px);
     width: 100%;
 }
-
-
 
 
 
@@ -74,7 +84,7 @@ body {
 
 
 #crimeMap {
-    height: 75vh;
+    height: 65vh;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -321,4 +331,356 @@ body {
         left: 10px;
         bottom: 10px;
     }
+}
+.citizen-dashboard {
+    padding: 40px;
+}
+
+
+.dashboard-header {
+    margin-bottom: 40px;
+}
+
+
+    .dashboard-header h1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+
+    .dashboard-header p {
+        color: #777;
+    }
+
+
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+
+
+.dashboard-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+
+
+    .dashboard-card .icon {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+
+
+    .dashboard-card h3 {
+        margin-bottom: 10px;
+    }
+
+
+
+    .dashboard-card button {
+        background: #0d6efd;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+
+        .dashboard-card button:hover {
+            opacity: .85;
+        }
+/* ==========================
+   CHINTAI HEADER
+========================== */
+
+
+/* ==========================
+   CHINTAI HEADER
+========================== */
+
+.chintai-header {
+    background: #111827;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+    position: relative;
+    z-index: 2000;
+}
+.chintai-header-container {
+    width: 100%;
+    padding: 0 45px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.chintai-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+
+.chintai-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+.chintai-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-left: 50px;
+}
+
+
+
+    .chintai-menu a {
+        color: #e5e7eb;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+
+
+        .chintai-menu a:hover {
+            color: white;
+        }
+
+
+
+
+
+/* RIGHT MENU */
+
+.chintai-auth {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+}
+
+
+
+    .chintai-auth a {
+        color: #e5e7eb;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+
+
+        .chintai-auth a:hover {
+            color: white;
+        }
+/* ===============================
+   FOOTER
+================================ */
+
+
+.chintai-footer {
+    background: #111827;
+    color: white;
+    padding: 25px 40px;
+    width: 100%;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+
+.footer-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    margin-top: 20px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+/* ===============================
+   GLOBAL PAGE LAYOUT
+================================ */
+
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+.chintai-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+
+.chintai-main {
+    flex: 1;
+    width: 100%;
+}
+/* =============================
+   CRIME REPORT PAGE
+============================= */
+
+
+.crime-report-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.1);
+}
+
+
+
+    .crime-report-container h1 {
+        font-size: 38px;
+        font-weight: 700;
+    }
+
+
+
+    .crime-report-container p {
+        color: #6b7280;
+        margin-bottom: 30px;
+    }
+
+
+
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+
+
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+
+.location-btn {
+    margin-top: 10px;
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+}
+
+
+
+.submit-report {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+    .submit-report:hover {
+        background: #b91c1c;
+    }
+
+
+
+.dashboard-btn {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+/* ==========================
+   IMAGE EVIDENCE PREVIEW
+========================== */
+
+
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+
+.preview-img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.2);
 }

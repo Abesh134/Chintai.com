@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "Citizen Dashboard";
+}
+
+
+<div class="citizen-dashboard">
+
+
+    <!-- Header -->
+
+    <div class="dashboard-header">
+
+        <h1>
+            Welcome, Citizen
+        </h1>
+
+        <p>
+            Your Crime Reporting & Safety Dashboard
+        </p>
+
+    </div>
+
+
+
+    <!-- Quick Actions -->
+
+    <div class="dashboard-cards">
+
+
+        <div class="dashboard-card">
+
+            <div class="icon">
+                🚨
+            </div>
+
+            <h3>
+                Report Crime
+            </h3>
+
+            <p>
+                Report any incident with location and evidence.
+            </p>
+
+            <a asp-controller="Crime"
+               asp-action="Report"
+               class="dashboard-btn">
+
+                Report Now
+
+            </a>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+            <div class="icon">
+                📋
+            </div>
+
+            <h3>
+                My Reports
+            </h3>
+
+            <p>
+                Track your submitted crime reports.
+            </p>
+
+            <button>
+                View Reports
+            </button>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+            <div class="icon">
+                🗺️
+            </div>
+
+            <h3>
+                Crime Map
+            </h3>
+
+            <p>
+                See crime activities around your area.
+            </p>
+
+            <button>
+                Open Map
+            </button>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+            <div class="icon">
+                🔔
+            </div>
+
+            <h3>
+                Safety Alerts
+            </h3>
+
+            <p>
+                Receive important safety notifications.
+            </p>
+
+            <button>
+                View Alerts
+            </button>
+
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
