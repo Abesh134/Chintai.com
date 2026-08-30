@@ -1,0 +1,81 @@
+﻿<header class="chintai-header">
+
+    <div class="chintai-header-container">
+
+
+        <!-- LOGO + NAME -->
+
+        <a class="chintai-brand"
+           asp-controller="Home"
+           asp-action="Index">
+
+
+            <img src="~/images/chintai-logo.png"
+                 alt="CHINTAI Logo"
+                 class="chintai-logo" />
+
+
+            <span>
+                CHINTAI
+            </span>
+
+
+        </a>
+
+
+
+
+        <!-- LEFT LINKS -->
+
+        <div class="chintai-menu">
+
+
+            <a asp-controller="Home"
+               asp-action="Index">
+
+                Home
+
+            </a>
+
+
+            <a asp-controller="Home"
+               asp-action="Privacy">
+
+                Privacy
+
+            </a>
+
+
+        </div>
+
+
+
+
+        <!-- RIGHT LINKS -->
+
+        <div class="chintai-auth">
+
+
+            <a asp-area="Identity"
+               asp-page="/Account/Register">
+
+                Register
+
+            </a>
+
+
+
+            <a asp-area="Identity"
+               asp-page="/Account/Login">
+
+                Login
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</header>
